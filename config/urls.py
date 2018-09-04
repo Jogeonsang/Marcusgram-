@@ -19,6 +19,11 @@ urlpatterns = [
         "users/",
         include("Marcus.users.urls", namespace="users"),
     ),
+    path(
+        "images/", 
+        include("Marcus.images.urls", namespace="images"),
+    ),
+
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
